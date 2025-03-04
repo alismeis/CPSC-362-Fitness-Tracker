@@ -9,7 +9,11 @@ workout_log = []
 
 @app.route("/")
 def home():
-    # Render the index.html from templates folder
+    # Render the home.html from templates folder
+    return render_template("home.html")
+
+@app.route("/workout_log")
+def workout_log():
     return render_template("index.html")
 
 @app.route("/add_workout", methods=["POST"])
